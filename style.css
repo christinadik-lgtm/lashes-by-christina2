@@ -159,11 +159,10 @@ header .container{
 
 .logo-image{
 
-    height:65px;
-
+    height:70px;
     width:auto;
-
-    transition:.35s;
+    display:block;
+    transition:.35s ease;
 
 }
 
