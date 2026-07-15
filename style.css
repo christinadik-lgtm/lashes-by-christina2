@@ -387,16 +387,13 @@ nav a:hover::after{
 
 .hero-text{
 
+    font-size:1.18rem;
+
     max-width:620px;
 
-    margin-bottom:40px;
-
-    color:var(--text-light);
-
-    font-size:1.1rem;
+    color:#555;
 
 }
-
 .hero-buttons{
 
     display:flex;
@@ -1332,4 +1329,24 @@ nav a.active::after{
     width:100%;
 
 }
+@keyframes fadeHero{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(35px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
 }
