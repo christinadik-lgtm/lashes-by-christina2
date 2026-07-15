@@ -319,32 +319,34 @@ nav a:hover::after{
 
     align-items:center;
 
-    background:url("E719285A-399B-450E-A9A4-C8543CA5FE6A.jpeg") center center/cover no-repeat;
+    overflow:hidden;
+
+    background:
+    linear-gradient(
+        rgba(255,255,255,.35),
+        rgba(255,255,255,.35)
+    ),
+    url("E719285A-399B-450E-A9A4-C8543CA5FE6A.jpeg");
+
+    background-size:cover;
+
+    background-position:center center;
+
+    background-repeat:no-repeat;
 
 }
 
-.hero-overlay{
 
-    position:absolute;
-
-    inset:0;
-
-    background:rgba(255,255,255,.12);
-
-}
 
 .hero-content{
 
     position:relative;
 
-    z-index:2;
-
-    max-width:650px;
+    max-width:720px;
 
     padding-top:120px;
 
 }
-
 .hero-subtitle{
 
     display:inline-block;
@@ -367,27 +369,27 @@ nav a:hover::after{
 
     font-family:"Cormorant Garamond",serif;
 
-    font-size:4.3rem;
+    font-size:4.2rem;
 
     line-height:1.05;
 
-    margin-bottom:30px;
+    margin-bottom:28px;
 
-    color:#2c2c2c;
+    color:#2f2f2f;
 
 }
 
 .hero-text{
 
-    max-width:560px;
+    max-width:620px;
 
-    margin-bottom:42px;
+    font-size:1.15rem;
 
-    font-size:1.1rem;
+    line-height:1.9;
 
-    line-height:1.8;
+    color:#555;
 
-    color:#444;
+    margin-bottom:40px;
 
 }
 
@@ -413,15 +415,13 @@ nav a:hover::after{
 
 .hero-features div{
 
-    background:rgba(255,255,255,.92);
+    background:rgba(255,255,255,.82);
 
     border-radius:18px;
 
-    padding:18px 22px;
+    padding:18px 24px;
 
-    box-shadow:0 12px 30px rgba(0,0,0,.08);
-
-    font-weight:500;
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
 
 }
 /* ==========================================================
