@@ -325,10 +325,14 @@ nav a:hover::after{
 
 .hero-overlay{
 
+    position:absolute;
+
+    inset:0;
+
     background:linear-gradient(
         90deg,
-        rgba(252,250,247,.92) 18%,
-        rgba(252,250,247,.55) 50%,
+        rgba(252,250,247,.90) 15%,
+        rgba(252,250,247,.55) 48%,
         rgba(252,250,247,.08) 82%
     );
 
