@@ -1,0 +1,1329 @@
+/* ==========================================================
+   LASHES BY CHRISTINA
+   STYLE.CSS
+   Teil 1
+   Reset • Variablen • Header • Navigation • Buttons • Hero
+========================================================== */
+
+/* ===========================
+   Variablen
+=========================== */
+
+:root{
+
+    --bg:#fcfaf7;
+    --white:#ffffff;
+
+    --text:#2f2f2f;
+    --text-light:#6f6f6f;
+
+    --gold:#c6a56a;
+    --gold-dark:#b58d50;
+
+    --border:#ece7df;
+
+    --shadow:0 20px 60px rgba(0,0,0,.08);
+
+    --radius:22px;
+
+    --transition:.35s ease;
+
+    --container:1200px;
+
+}
+
+/* ===========================
+   Reset
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+    scroll-padding-top:110px;
+
+}
+
+body{
+
+    font-family:"Manrope",sans-serif;
+
+    background:var(--bg);
+
+    color:var(--text);
+
+    line-height:1.8;
+
+    overflow-x:hidden;
+
+}
+
+img{
+
+    display:block;
+
+    width:100%;
+
+    max-width:100%;
+
+    height:auto;
+
+}
+
+a{
+
+    color:inherit;
+
+    text-decoration:none;
+
+}
+
+ul{
+
+    list-style:none;
+
+}
+
+.container{
+
+    width:min(92%,var(--container));
+
+    margin:auto;
+
+}
+
+/* ===========================
+   Header
+=========================== */
+
+header{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    z-index:1000;
+
+    background:rgba(255,255,255,.94);
+
+    backdrop-filter:blur(20px);
+
+    border-bottom:1px solid rgba(198,165,106,.15);
+
+    box-shadow:0 4px 25px rgba(0,0,0,.05);
+
+    transition:var(--transition);
+
+}
+
+header.scrolled{
+
+    background:rgba(255,255,255,.97);
+
+    box-shadow:0 8px 30px rgba(0,0,0,.08);
+
+}
+
+header .container{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:18px 0;
+
+}
+
+/* ===========================
+   Logo
+=========================== */
+
+.logo{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:2.2rem;
+
+    font-weight:600;
+
+    letter-spacing:.5px;
+
+    transition:var(--transition);
+
+}
+
+.logo:hover{
+
+    color:var(--gold);
+
+}
+
+/* ===========================
+   Navigation
+=========================== */
+
+nav ul{
+
+    display:flex;
+
+    gap:40px;
+
+}
+
+nav a{
+
+    position:relative;
+
+    font-weight:600;
+
+    transition:var(--transition);
+
+}
+
+nav a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-8px;
+
+    width:0;
+
+    height:2px;
+
+    background:var(--gold);
+
+    transition:var(--transition);
+
+}
+
+nav a:hover{
+
+    color:var(--gold);
+
+}
+
+nav a:hover::after{
+
+    width:100%;
+
+}
+
+/* ===========================
+   Buttons
+=========================== */
+
+.button{
+
+    display:inline-flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:17px 38px;
+
+    border:none;
+
+    border-radius:999px;
+
+    cursor:pointer;
+
+    font-weight:600;
+
+    color:#fff;
+
+    background:linear-gradient(
+        135deg,
+        #d7b882,
+        #b88c4d
+    );
+
+    box-shadow:0 18px 35px rgba(198,165,106,.30);
+
+    transition:var(--transition);
+
+}
+
+.button:hover{
+
+    transform:translateY(-4px);
+
+    background:var(--gold-dark);
+
+    box-shadow:0 25px 45px rgba(198,165,106,.35);
+
+}
+
+.button:active{
+
+    transform:scale(.98);
+
+}
+
+.button-outline{
+
+    display:inline-flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:16px 34px;
+
+    border:1px solid var(--gold);
+
+    border-radius:999px;
+
+    color:var(--gold);
+
+    transition:var(--transition);
+
+}
+
+.button-outline:hover{
+
+    background:var(--gold);
+
+    color:#fff;
+
+}
+
+/* ===========================
+   Hero
+=========================== */
+
+.hero{
+
+    position:relative;
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    background:url("https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=1800&q=80") center center/cover no-repeat;
+
+}
+
+.hero-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        90deg,
+        rgba(252,250,247,.96) 30%,
+        rgba(252,250,247,.72) 60%,
+        rgba(252,250,247,.15)
+    );
+
+}
+
+.hero-content{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:700px;
+
+    padding-top:120px;
+
+}
+
+.hero-subtitle{
+
+    display:inline-block;
+
+    margin-bottom:18px;
+
+    color:var(--gold);
+
+    text-transform:uppercase;
+
+    letter-spacing:4px;
+
+    font-size:.8rem;
+
+}
+
+.hero h1{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:clamp(2.8rem,5vw,4.8rem);
+
+    line-height:1.05;
+
+    margin-bottom:28px;
+
+    text-wrap:balance;
+
+}
+
+.hero-text{
+
+    max-width:620px;
+
+    margin-bottom:40px;
+
+    color:var(--text-light);
+
+    font-size:1.1rem;
+
+}
+
+.hero-buttons{
+
+    display:flex;
+
+    gap:18px;
+
+    margin-bottom:55px;
+
+}
+
+.hero-features{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:20px;
+
+}
+
+.hero-features div{
+
+    padding:18px 24px;
+
+    background:#fff;
+
+    border-radius:18px;
+
+    box-shadow:var(--shadow);
+
+    font-weight:500;
+
+    animation:floating 6s ease-in-out infinite;
+
+}
+
+.hero-features div:nth-child(2){
+
+    animation-delay:.5s;
+
+}
+
+.hero-features div:nth-child(3){
+
+    animation-delay:1s;
+
+}
+
+.hero-features div:nth-child(4){
+
+    animation-delay:1.5s;
+
+}
+/* ==========================================================
+   ALLGEMEINE BEREICHE
+========================================================== */
+
+section{
+
+    padding:110px 0;
+
+}
+
+.section-label{
+
+    display:inline-block;
+
+    margin-bottom:16px;
+
+    color:var(--gold);
+
+    text-transform:uppercase;
+
+    letter-spacing:3px;
+
+    font-size:.8rem;
+
+}
+
+section h2{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:clamp(2.3rem,4vw,3.2rem);
+
+    margin-bottom:25px;
+
+    line-height:1.1;
+
+    text-wrap:balance;
+
+}
+
+.section-intro{
+
+    max-width:700px;
+
+    margin-bottom:60px;
+
+    color:var(--text-light);
+
+}
+
+/* ==========================================================
+   STUDIO
+========================================================== */
+
+.about{
+
+    background:#fff;
+
+}
+
+.about-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:90px;
+
+    align-items:center;
+
+}
+
+.about-text p{
+
+    margin-bottom:24px;
+
+    color:var(--text-light);
+
+    font-size:1.05rem;
+
+}
+
+.about-image{
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:28px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.about-image img{
+
+    transition:.7s ease;
+
+}
+
+.about-image:hover img{
+
+    transform:scale(1.04);
+
+}
+
+.about-image::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        to top,
+        rgba(255,255,255,.05),
+        rgba(255,255,255,0)
+    );
+
+    pointer-events:none;
+
+}
+
+/* ==========================================================
+   VORTEILE
+========================================================== */
+
+.features{
+
+    background:var(--bg);
+
+}
+
+.feature-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:28px;
+
+    margin-top:60px;
+
+}
+
+.feature-card{
+
+    background:#fff;
+
+    padding:40px 30px;
+
+    border-radius:22px;
+
+    border:1px solid transparent;
+
+    box-shadow:var(--shadow);
+
+    transition:var(--transition);
+
+}
+
+.feature-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:rgba(198,165,106,.35);
+
+}
+
+.feature-card h3{
+
+    margin-bottom:18px;
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:1.8rem;
+
+}
+
+.feature-card p{
+
+    color:var(--text-light);
+
+}
+
+/* ==========================================================
+   SOFT VOLUMEN
+========================================================== */
+
+.soft{
+
+    background:#fff;
+
+}
+
+.soft-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:90px;
+
+    align-items:center;
+
+}
+
+.soft-text p{
+
+    margin-bottom:22px;
+
+    color:var(--text-light);
+
+    font-size:1.05rem;
+
+}
+
+.soft-image{
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:28px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.soft-image img{
+
+    transition:.7s ease;
+
+}
+
+.soft-image:hover img{
+
+    transform:scale(1.04);
+
+}
+
+.soft-image::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        to top,
+        rgba(255,255,255,.05),
+        rgba(255,255,255,0)
+    );
+
+    pointer-events:none;
+
+}
+
+/* ==========================================================
+   EINBLENDEN
+========================================================== */
+
+.fade{
+
+    opacity:0;
+
+    transform:translateY(45px);
+
+    transition:opacity 1s ease, transform 1s ease;
+
+}
+
+.fade.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+/* ==========================================================
+   GALERIE
+========================================================== */
+
+.gallery-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+    gap:24px;
+
+    margin-top:60px;
+
+}
+
+.gallery-item{
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:#fff;
+
+    border-radius:24px;
+
+    box-shadow:var(--shadow);
+
+    transition:var(--transition);
+
+}
+
+.gallery-item img{
+
+    width:100%;
+
+    aspect-ratio:4/5;
+
+    object-fit:cover;
+
+    transition:.7s ease;
+
+}
+
+.gallery-item:hover img{
+
+    transform:scale(1.04);
+
+}
+
+.gallery-item::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        to top,
+        rgba(0,0,0,.20),
+        rgba(0,0,0,0)
+    );
+
+    opacity:0;
+
+    transition:.4s ease;
+
+}
+
+.gallery-item:hover::after{
+
+    opacity:1;
+
+}
+/* ==========================================================
+   PREISE
+========================================================== */
+
+.prices{
+
+    background:var(--bg);
+
+}
+
+.price-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+    margin-top:60px;
+
+}
+
+.price-card{
+
+    background:#fff;
+
+    padding:55px 35px;
+
+    border-radius:28px;
+
+    border:1px solid rgba(198,165,106,.12);
+
+    box-shadow:var(--shadow);
+
+    transition:var(--transition);
+
+}
+
+.price-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:rgba(198,165,106,.35);
+
+}
+
+.price-card h3{
+
+    margin-bottom:22px;
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:2rem;
+
+}
+
+.price{
+
+    font-size:2.9rem;
+
+    font-weight:700;
+
+    color:var(--gold);
+
+}
+
+.price-note{
+
+    margin-top:35px;
+
+    text-align:center;
+
+    color:var(--text-light);
+
+}
+
+/* ==========================================================
+   GOOGLE BEWERTUNGEN
+========================================================== */
+
+.reviews{
+
+    background:#fff;
+
+}
+
+.review-preview{
+
+    max-width:760px;
+
+    margin:60px auto 0;
+
+    padding:60px;
+
+    text-align:center;
+
+    background:var(--bg);
+
+    border-radius:28px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.stars{
+
+    margin-bottom:25px;
+
+    font-size:2rem;
+
+    letter-spacing:6px;
+
+}
+
+.review-preview p{
+
+    margin-bottom:35px;
+
+    color:var(--text-light);
+
+}
+
+/* ==========================================================
+   KONTAKT
+========================================================== */
+
+.contact{
+
+    background:linear-gradient(
+        180deg,
+        #fcfaf7 0%,
+        #ffffff 100%
+    );
+
+}
+
+.contact-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:80px;
+
+    align-items:center;
+
+}
+
+.contact-card{
+
+    padding:45px;
+
+    background:#fff;
+
+    border-radius:24px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.contact-card h2{
+
+    margin-bottom:25px;
+
+}
+
+.contact-info{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+    margin-bottom:35px;
+
+}
+
+.contact-image{
+
+    overflow:hidden;
+
+    border-radius:28px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.contact-image img{
+
+    transition:.7s ease;
+
+}
+
+.contact-image:hover img{
+
+    transform:scale(1.04);
+
+}
+
+/* ==========================================================
+   FOOTER
+========================================================== */
+
+footer{
+
+    padding:90px 0 40px;
+
+    background:#faf7f2;
+
+    border-top:1px solid #ece4d8;
+
+    color:#444;
+
+}
+
+.footer-grid{
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr 1fr;
+
+    gap:60px;
+
+    margin-bottom:50px;
+
+}
+
+.footer-logo{
+
+    margin-bottom:18px;
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:2.2rem;
+
+}
+
+.footer-text,
+.footer-links a,
+.footer-bottom{
+
+    color:#777;
+
+}
+
+.footer-links a{
+
+    transition:var(--transition);
+
+}
+
+.footer-links a:hover{
+
+    color:var(--gold);
+
+}
+
+.footer-bottom{
+
+    padding-top:30px;
+
+    text-align:center;
+
+    border-top:1px solid #e6ddd0;
+
+    font-size:.9rem;
+
+}
+
+/* ==========================================================
+   SCROLL TO TOP
+========================================================== */
+
+.scroll-top{
+
+    position:fixed;
+
+    right:25px;
+
+    bottom:25px;
+
+    width:55px;
+
+    height:55px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:50%;
+
+    background:var(--gold);
+
+    color:#fff;
+
+    font-size:1.3rem;
+
+    cursor:pointer;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    box-shadow:var(--shadow);
+
+    transition:var(--transition);
+
+    z-index:999;
+
+}
+
+.scroll-top.show{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+.scroll-top:hover{
+
+    background:var(--gold-dark);
+
+    transform:translateY(-4px);
+
+}
+
+/* ==========================================================
+   SCROLLBAR
+========================================================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#f5f2ee;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--gold);
+
+    border-radius:50px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:var(--gold-dark);
+
+}
+
+/* ==========================================================
+   AUSWAHL
+========================================================== */
+
+::selection{
+
+    background:var(--gold);
+
+    color:#fff;
+
+}
+
+/* ==========================================================
+   FOCUS
+========================================================== */
+
+a:focus-visible,
+.button:focus-visible,
+.button-outline:focus-visible{
+
+    outline:2px solid var(--gold);
+
+    outline-offset:5px;
+
+}
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media (max-width:992px){
+
+    nav{
+
+        display:none;
+
+    }
+
+    .about-grid,
+    .soft-grid,
+    .contact-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .feature-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .gallery-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .price-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .footer-grid{
+
+        grid-template-columns:1fr;
+
+        text-align:center;
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    section{
+
+        padding:90px 0;
+
+    }
+
+    .hero{
+
+        text-align:center;
+
+    }
+
+    .hero h1{
+
+        max-width:12ch;
+
+        font-size:2.7rem;
+
+        line-height:1.1;
+
+    }
+
+    .hero-buttons{
+
+        flex-direction:column;
+
+    }
+
+    .hero-features{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .feature-grid,
+    .gallery-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .contact-card{
+
+        padding:30px;
+
+    }
+
+    section h2{
+
+        font-size:2.3rem;
+
+    }
+
+}
+
+/* ==========================================================
+   ANIMATIONEN
+========================================================== */
+
+@keyframes floating{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-8px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+nav a.active{
+
+    color:var(--gold);
+
+}
+
+nav a.active::after{
+
+    width:100%;
+
+}
+}
