@@ -311,30 +311,49 @@ nav a:hover::after{
 
 .hero{
 
-    position:relative;
+    padding:170px 0 120px;
 
-    min-height:100vh;
+    background:#fcfaf7;
 
-    display:flex;
-
-    align-items:center;
-
-    background:url("23C21516-73EE-4D88-B75C-604E36DB956A.png") center center/cover no-repeat;
+    min-height:auto;
 
 }
 
-.hero-overlay{
+.hero-grid{
 
-    position:absolute;
+    display:grid;
 
-    inset:0;
+    grid-template-columns:1.1fr .9fr;
 
-    background:linear-gradient(
-        90deg,
-        rgba(252,250,247,.96) 28%,
-        rgba(252,250,247,.78) 58%,
-        rgba(252,250,247,.18) 100%
-    );
+    gap:70px;
+
+    align-items:center;
+
+}
+
+.hero-image{
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+    box-shadow:0 30px 70px rgba(0,0,0,.12);
+
+}
+
+.hero-image img{
+
+    display:block;
+
+    width:100%;
+
+    transition:.6s;
+
+}
+
+.hero-image:hover img{
+
+    transform:scale(1.03);
 
 }
 
