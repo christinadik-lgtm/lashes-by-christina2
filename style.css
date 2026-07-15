@@ -311,14 +311,23 @@ nav a:hover::after{
 
 .hero{
 
-    padding:170px 0 120px;
+    position:relative;
 
-    background:#fcfaf7;
+    min-height:100vh;
 
-    min-height:auto;
+    display:flex;
+
+    align-items:center;
+
+    background:url("E719285A-399B-450E-A9A4-C8543CA5FE6A.jpeg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
 
 }
-
 .hero-grid{
 
     display:grid;
