@@ -152,21 +152,24 @@ header .container{
 
 .logo{
 
-    font-family:"Cormorant Garamond",serif;
-
-    font-size:2.2rem;
-
-    font-weight:600;
-
-    letter-spacing:.5px;
-
-    transition:var(--transition);
+    display:flex;
+    align-items:center;
 
 }
 
-.logo:hover{
+.logo-image{
 
-    color:var(--gold);
+    height:65px;
+
+    width:auto;
+
+    transition:.35s;
+
+}
+
+.logo-image:hover{
+
+    transform:scale(1.03);
 
 }
 
