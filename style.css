@@ -306,7 +306,7 @@ nav a:hover::after{
 }
 
 /* ===========================
-   Hero
+   HERO
 =========================== */
 
 .hero{
@@ -319,45 +319,40 @@ nav a:hover::after{
 
     align-items:center;
 
-    overflow:hidden;
-
     background:
     linear-gradient(
-        rgba(255,255,255,.35),
-        rgba(255,255,255,.35)
+        rgba(255,255,255,.42),
+        rgba(255,255,255,.42)
     ),
     url("E719285A-399B-450E-A9A4-C8543CA5FE6A.jpeg");
 
     background-size:cover;
 
-    background-position:center center;
+    background-position:center;
 
     background-repeat:no-repeat;
 
 }
 
-
-
 .hero-content{
 
-    position:relative;
-
-    max-width:720px;
+    max-width:700px;
 
     padding-top:120px;
 
 }
+
 .hero-subtitle{
 
     display:inline-block;
 
-    margin-bottom:18px;
+    margin-bottom:20px;
 
-    color:var(--gold);
+    color:#b58d50;
 
     text-transform:uppercase;
 
-    letter-spacing:4px;
+    letter-spacing:3px;
 
     font-size:.85rem;
 
@@ -369,27 +364,27 @@ nav a:hover::after{
 
     font-family:"Cormorant Garamond",serif;
 
-    font-size:4.2rem;
+    font-size:4.6rem;
 
-    line-height:1.05;
-
-    margin-bottom:28px;
+    line-height:1.02;
 
     color:#2f2f2f;
+
+    margin-bottom:30px;
 
 }
 
 .hero-text{
 
-    max-width:620px;
-
-    font-size:1.15rem;
+    font-size:1.18rem;
 
     line-height:1.9;
 
     color:#555;
 
-    margin-bottom:40px;
+    max-width:620px;
+
+    margin-bottom:45px;
 
 }
 
@@ -399,7 +394,9 @@ nav a:hover::after{
 
     gap:18px;
 
-    margin-bottom:50px;
+    margin-bottom:55px;
+
+    flex-wrap:wrap;
 
 }
 
@@ -411,17 +408,59 @@ nav a:hover::after{
 
     gap:18px;
 
+    max-width:650px;
+
 }
 
 .hero-features div{
 
-    background:rgba(255,255,255,.82);
+    background:rgba(255,255,255,.88);
 
     border-radius:18px;
 
-    padding:18px 24px;
+    padding:18px 22px;
 
-    box-shadow:0 15px 35px rgba(0,0,0,.08);
+    box-shadow:0 12px 35px rgba(0,0,0,.08);
+
+    font-weight:500;
+
+}
+
+@media (max-width:768px){
+
+.hero{
+
+    background-position:center;
+
+    text-align:center;
+
+}
+
+.hero-content{
+
+    padding-top:150px;
+
+    margin:auto;
+
+}
+
+.hero h1{
+
+    font-size:3rem;
+
+}
+
+.hero-buttons{
+
+    flex-direction:column;
+
+}
+
+.hero-features{
+
+    grid-template-columns:1fr;
+
+}
 
 }
 /* ==========================================================
