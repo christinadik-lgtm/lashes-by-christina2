@@ -346,12 +346,13 @@ nav a:hover::after{
 
     z-index:2;
 
-    max-width:700px;
+    max-width:760px;
 
     padding-top:120px;
 
-}
+    animation:fadeHero 1.2s ease;
 
+}
 .hero-subtitle{
 
     display:inline-block;
