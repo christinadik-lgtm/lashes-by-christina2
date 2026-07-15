@@ -142,10 +142,9 @@ header .container{
 
     align-items:center;
 
-    padding:18px 0;
+    min-height:90px;
 
 }
-
 /* ===========================
    Logo
 =========================== */
