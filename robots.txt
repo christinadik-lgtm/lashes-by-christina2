@@ -1,0 +1,5 @@
+User-agent: *
+
+Allow: /
+
+Sitemap: https://christinadik-lgtm.github.io/lashes-by-christina2/sitemap.xml
