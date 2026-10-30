@@ -1,5 +1,10 @@
-User-agent: *
+User-agent: Googlebot
+Allow: /
 
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: *
 Allow: /
 
 Sitemap: https://christinadik-lgtm.github.io/lashes-by-christina2/sitemap.xml
